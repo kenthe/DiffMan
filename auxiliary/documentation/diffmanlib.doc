@@ -1,0 +1,141 @@
+DIFFMAN LIBRARY STANDARDS:
+-------------------------
+PURPOSE:
+-------
+   This document describes the coding and library standards we will use
+   in the DiffMan project. 
+
+GENERAL GOAL: 
+------------
+   We want to construct a general library that is not very much depending 
+   on particularities of the MatLab programming language, and we have in 
+   mind that there might be a time where we want to implement DiffMan in
+   an other language (e.g. C++ or Fortran90). Furthermore, we want to
+   simplify the task of joining the two libraries DiffMan and SOPHUS in the 
+   future. In order to accomplish this, we will keep a documentation and programming 
+   style that is close to the SOPHUS standard. 
+   
+CLASS AND DIRECTORY STRUCTURE:
+-----------------------------
+   There are many classes which have a general mathematical definition, but where there
+   are many concrete examples which differ in details. An example is the 
+   class "liealgebra", which has a general definition, and many concrete
+   versions such as e.g.: "laso" (Lie algebra special orthogonal), "lagl" 
+   (Lie algebra general linear) etc. In addition there are Lie algebras
+   that are constructed from simpler Lie algebras by standard constructions,
+   such as 'direct products' and 'semidirect products'.
+   
+   The way we have arranged the Lie algebra classes serves as an
+   example of how other class hierarchies should be organized:
+   
+   CLASS NAMES: All functions and classes will be implemented with lowercase
+   letters. In specifications we will often use a mix of lowercase and
+   uppercase letters to enhance readability, e.g. writing 'LieAlgebra' 
+   instead of 'liealgebra. Objects that in standard mathematical notation
+   differ by the case of the letters, e.g. 'SO' for the special orthogonal
+   Lie group and 'so' for the corresponding Lie algebra, will be 
+   discriminated by adding some extra letters. Thus concrete Lie algebras will be
+   preceeded with 'la' and Lie groups by 'lg'. Thus the class 'laso'
+   is the special orthogonal Lie algebra and 'lgso' is the corresponding group.
+   
+   DIRECTORIES: The directory diffman/liealgebra contains all liealgebra classes.
+   For each class, there is a corresponding subdirectory, ex: liealgebra/@laso, 
+   liealgebra/@lagl, liealgebra/@larn, etc.
+   
+   VIRTUAL SUPERCLASS: The directory diffman/liealgebra/@liealgebra is a 
+   (virtual) superclass for all Liealgebras. This means that all other classes 
+   must have this as a superclass. 'Virtual' means that the elements of the class 
+   'liealgebra' contains no data. The superclass has several purposes:
+       - All liealgebras will have >> isa(obj,'liealgebra') == 1
+       - We get a directory where we can put all general functions on 
+         Liealgebras that can be programmed for all specific Liealgebras.
+         
+    DYNAMIC SUBTYPING: In many cases it is simplest to implement a family
+    of Lie algebras as a single object. For example, the class 'laso' is
+    really a family of Liealgebras, so(n), one algebra for each n>0.
+    Thus in this case the integer n serves as a dynamic subtyping of the
+    class. Generally, whenever a class has subtyping, we will call the
+    subtype information the SHAPE of the class. Thus in class laso, we have
+    a function 'getshape' which returns the integer n, and a function 
+    'setshape' that sets n. The type of the SHAPE information may differ from
+    class to class.
+    
+    CLASS CREATORS: In order to simplify the programming of new classes as 
+    much as possible, we will only require the following simple rules for 
+    the creators in the class. Let 'aclass' denote the particular class, and 
+    'sclass' denote its superclass. (For example, we could have 'aclass = laso' 
+    and 'sclass = liealgebra'.)
+       1) b = aclass; % default constructor
+          Calling the creator without arguments produces an element without
+          any particular data.
+       2) b = sclass(c,arg2,arg3,...); where isa(c,'aclass') == 1; 
+          This will always yield the same result as:
+          b = aclass(c,arg2,arg3,...); 
+          I.e. if the superclass constructor gets an element of a subclass 
+          as its first element, it will call the subclass constructor.
+          
+    GET and SET FUNCTIONS: The above requirements for the creators are not 
+    sufficient to set properties in an object. If 'prop1' and 'prop2' are 
+    two properties that can be set in an object 'obj' in the class 
+    'aclass', then we require the existence of two functions:
+       setprop1(obj,val1);
+       setprop2(obj,val2);
+    These functions updates the two properties in the object 'obj' with 
+    the new values 'val1' and 'val2'. For each 'setxxx' function there is 
+    corresponding 'getxxx' function that returnes the same values, without 
+    altering the object.
+       val1 = getprop1(obj);
+       val2 = getprop2(obj);
+    It would be nice to have the matlab type 'get' and 'set' functions 
+    that we e.g. find in the handle-graphics routines, but these can be 
+    provided automatically at a later time if we have the simple setxxx 
+    and getxxx routines above.
+    
+    PARAMETRIZED CLASSES: In many important instances a class is constructed from 
+    simpler classes. For example a Lie algebra can be constructed as the direct 
+    product of two Lie algebras. In these cases, we really would like to 
+    create a class:
+       class ladirprod<laa,lab>
+    that take two input classes as arguments. In some languages (C++ for 
+    example) there are language constructions for such parametrized 
+    classes (template in C++). Matlab does not have this ability, and we have to 
+    fake this functionality by a dynamic mechanism. The class 
+    liealgebra/@ladirprod shows how this should be done. Note that in the 
+    specification we keep the parametrized class concept even if it does 
+    not really exist in MatLab. This is to keep the basic concept clearer.
+    
+DOCUMENTATION:
+-------------
+   The documentation standard is close to the SOPHUS standard. We do, 
+   however, write the specifications in ascii form rather than LaTeX. All 
+   specifications are written in an ascii file with the name 
+   'classname.doc'. This file is put in the directory @classname. A 
+   template document for the class specifications is found in the file 
+   'classdoc.doc'. We do not require any other documentation of the classes 
+   than these 'classname.doc' files, i.e. we do not require help 
+   information in the header of each routine. This may eventually be 
+   supplied later, if we find it convenient.
+   
+   In the standard Matlab way, we _generally_ assume that functions take 
+   arguments that are transferred by value (does not change), and that any 
+   variables that change is on the left hand side of the assignment. The 
+   only exception from this rule is the 'setprop' functions, which updates 
+   the value of the first argument:
+      setprop(update obj, observe value);
+   An example m-file showing how this updating is done, is found in 
+   progex/setxxx.m
+      
+   DIFFMAN STANDARD: There is a set of routines that _all_ classes should have. 
+   These are defined in the document 'diffmanstandard.doc'. Unless there is any 
+   special reason to explain how these routines work in a particular 
+   class, they are not documented in the class documentation.
+   
+   SUPER and SUBCLASSES: Classes such as 'laso' and 'liealgebra' is in a 
+   subclass-superclass relationship. Operations that are defined in the 
+   superclass, are generally not repeated in the subclass, unless there is 
+   a particular reason to describe the properties of the routine in the 
+   subclass.
+      
+Written by: Hans Munthe-Kaas, august 1997.
+Validated by:
+Accepted by:

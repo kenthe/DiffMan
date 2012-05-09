@@ -1,0 +1,552 @@
+%
+%   Classical Runge-Kutta coefficients: explicit methods
+%
+Scheme: E1
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 2.1048  2.0347  2.0092  2.0023  2.0006  2.0001  2.0000
+
+   Global order:        0.9502  0.9460  0.9681  0.9831  0.9913  0.9956  0.9978
+
+done ftorder
+Scheme: ME2
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 3.0568  3.0189  3.0050  3.0013  3.0003  3.0001  3.0000
+
+   Global order:        2.0845  2.0229  2.0058  2.0014  2.0004  2.0001  2.0000
+
+done ftorder
+Scheme: heun2
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 3.3120  3.1103  3.0308  3.0079  3.0020  3.0005  3.0001
+
+   Global order:        1.8996  1.9739  1.9935  1.9984  1.9996  1.9999  2.0000
+
+done ftorder
+Scheme: ode23
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 3.2896  3.1038  3.0288  3.0074  3.0019  3.0005  3.0001
+
+   Global order:        2.0999  2.0256  2.0064  2.0016  2.0004  2.0001  2.0000
+
+done ftorder
+Scheme: moan25
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 3.6255  3.3282  3.1132  3.0314  3.0081  3.0020  3.0005
+
+   Global order:        2.0676  2.0143  2.0034  2.0008  2.0002  2.0001  2.0000
+
+done ftorder
+Scheme: moan35
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 4.3190  4.0400  4.0083  4.0020  4.0005  4.0001  4.0000
+
+   Global order:        3.2298  3.0598  3.0047  2.9957  2.9962  2.9977  2.9988
+
+done ftorder
+Scheme: RK4
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 5.5097  5.1551  5.0408  5.0103  5.0026  5.0006  5.0000
+
+   Global order:        4.0896  4.0425  4.0151  4.0062  4.0028  4.0014  4.0011
+
+done ftorder
+Scheme: rk45
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 6.3480  5.5568  5.1710  5.0455  5.0116  5.0021  4.9930
+
+   Global order:        4.4262  4.3299  4.1899  4.1028  4.0535  4.0268  4.0045
+
+done ftorder
+Scheme: RKF34
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 4.2696  4.0810  4.0213  4.0054  4.0014  4.0003  4.0001
+
+   Global order:        2.9998  3.0171  3.0080  3.0029  3.0010  3.0004  3.0002
+
+done ftorder
+Scheme: RKF43
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 5.1315  5.0443  5.0119  5.0030  5.0008  4.9999  4.9972
+
+   Global order:        3.6961  3.8563  3.9206  3.9589  3.9792  3.9897  3.9969
+
+done ftorder
+Scheme: RKF45a
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 6.3091  5.4745  5.1364  5.0355  5.0089  5.0012  4.9909
+
+   Global order:        4.2508  4.1615  4.0827  4.0418  4.0210  4.0100  3.9967
+
+done ftorder
+Scheme: RKF54a
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 7.2822  7.0007  6.7793  6.4079  5.9338  5.0057  2.6597
+
+   Global order:        4.7926  4.9244  4.9675  4.9857  4.9923  4.9563  3.6805
+
+done ftorder
+Scheme: RKF45b
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 6.3480  5.5568  5.1710  5.0455  5.0116  5.0021  4.9930
+
+   Global order:        4.4262  4.3299  4.1899  4.1028  4.0535  4.0268  4.0045
+
+done ftorder
+Scheme: RKF54b
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 7.2031  6.8251  6.4553  6.1692  6.0351  5.8402  3.7098
+
+   Global order:        4.8386  4.9621  4.9762  4.9871  4.9928  4.9748  4.2725
+
+done ftorder
+Scheme: dopri45
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 6.0919  5.2468  5.0617  5.0155  5.0039  4.9999  4.9953
+
+   Global order:        4.1954  4.1252  4.0760  4.0440  4.0239  4.0118  3.9931
+
+done ftorder
+Scheme: dopri54
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 7.5952  6.6836  6.2370  6.0615  5.9905  5.7655  3.3965
+
+   Global order:        5.3982  5.2929  5.1545  5.0725  5.0337  5.0095  3.3212
+
+done ftorder
+Scheme: butcher6
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 Time integration:
+   Work done:  97.6 %. Estimated time left:   0 min.  1 seconds.
+
+
+   Local order: 7.3498  7.0585  6.9795  6.8535  6.4204  5.0991  2.6976
+
+   Global order:        5.7428  5.8698  5.9429  5.9729  5.9587  4.8105  0.7606
+
+done ftorder
+Scheme: RKF78
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 Time integration:
+   Work done:  96.8 %. Estimated time left:   0 min.  1 seconds.
+8 Time integration:
+   Work done:  48.0 %. Estimated time left:   0 min. 33 seconds.
+   Work done:  97.6 %. Estimated time left:   0 min.  1 seconds.
+
+
+   Local order: 6.7006  5.4185  5.0572  5.0102  4.9948  4.4016  2.5374
+
+   Global order:        5.4031  6.6142  6.8982  6.5713  0.8082  -0.0084 0.0074
+
+done ftorder
+Scheme: RKF87
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 Time integration:
+   Work done:  82.5 %. Estimated time left:   0 min.  6 seconds.
+8 Time integration:
+   Work done:  40.9 %. Estimated time left:   0 min. 44 seconds.
+   Work done:  81.9 %. Estimated time left:   0 min. 13 seconds.
+
+
+   Local order: 6.0868  5.1085  5.0336  5.0087  4.9946  4.4016  2.5374
+
+   Global order:        8.5982  7.9573  7.9521  1.3925  -0.0227 -0.0111 0.0093
+
+done ftorder
+Scheme: dopri78
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 Time integration:
+   Work done:  84.1 %. Estimated time left:   0 min.  6 seconds.
+8 Time integration:
+   Work done:  42.5 %. Estimated time left:   0 min. 41 seconds.
+   Work done:  85.0 %. Estimated time left:   0 min. 11 seconds.
+
+
+   Local order: 7.1062  5.3388  5.0486  5.0096  4.9947  4.3960  2.5430
+
+   Global order:        6.1366  6.6440  6.8878  6.4158  0.6305  0.0113  0.0001
+
+done ftorder
+Scheme: dopri87
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 Time integration:
+   Work done:  71.4 %. Estimated time left:   0 min. 12 seconds.
+8 Time integration:
+   Work done:  35.4 %. Estimated time left:   0 min. 55 seconds.
+   Work done:  70.9 %. Estimated time left:   0 min. 25 seconds.
+
+
+   Local order: 5.2507  5.1225  5.0342  5.0087  4.9947  4.4016  2.5374
+
+   Global order:        8.8750  8.6868  5.5096  0.1912  -0.0137 -0.0053 0.0058
+
+done ftorder
+
+%
+%   Classical Runge-Kutta coefficients: implicit methods
+%
+
+Scheme: IE1
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 2.3872  2.1708  2.0510  2.0134  2.0034  2.0009  2.0002
+
+   Global order:        1.1539  1.0775  1.0375  1.0183  1.0090  1.0045  1.0022
+
+done ftorder
+Scheme: GL2
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 3.0568  3.0189  3.0050  3.0013  3.0003  3.0001  3.0000
+
+   Global order:        2.0845  2.0229  2.0058  2.0014  2.0004  2.0001  2.0000
+
+done ftorder
+Scheme: GL4
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 Time integration:
+   Work done:  68.5 %. Estimated time left:   0 min. 14 seconds.
+
+
+   Local order: 5.3050  5.0900  5.0236  5.0060  5.0015  5.0003  4.9994
+
+   Global order:        3.9736  4.0246  4.0154  4.0075  4.0036  4.0017  3.9999
+
+done ftorder
+Scheme: GL6
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 Time integration:
+   Work done:  68.3 %. Estimated time left:   0 min. 14 seconds.
+8 Time integration:
+   Work done:  35.4 %. Estimated time left:   0 min. 55 seconds.
+   Work done:  71.7 %. Estimated time left:   0 min. 24 seconds.
+
+
+   Local order: 7.3101  6.5718  5.7602  5.2299  5.0511  4.4181  2.5401
+
+   Global order:        5.9483  5.9284  5.9352  5.9389  4.9662  0.7175  0.0196
+
+done ftorder
+Scheme: TRAP2
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 3.3120  3.1103  3.0308  3.0079  3.0020  3.0005  3.0001
+
+   Global order:        1.8996  1.9739  1.9935  1.9984  1.9996  1.9999  2.0000
+
+done ftorder
+Scheme: GL4S
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 Time integration:
+   Work done:  67.7 %. Estimated time left:   0 min. 14 seconds.
+
+
+   Local order: 5.3050  5.0900  5.0236  5.0060  5.0015  5.0003  4.9994
+
+   Global order:        3.9736  4.0246  4.0154  4.0075  4.0036  4.0017  3.9999
+
+done ftorder
+Scheme: GL6S
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 Time integration:
+   Work done:  66.7 %. Estimated time left:   0 min. 15 seconds.
+8 Time integration:
+   Work done:  36.2 %. Estimated time left:   0 min. 54 seconds.
+   Work done:  72.4 %. Estimated time left:   0 min. 23 seconds.
+
+
+   Local order: 7.3101  6.5718  5.7602  5.2299  5.0511  4.4181  2.5401
+
+   Global order:        5.9483  5.9284  5.9352  5.9389  4.9662  0.7175  0.0196
+
+done ftorder
+Scheme: LobattoIIIA4
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 Time integration:
+   Work done:  85.7 %. Estimated time left:   0 min.  5 seconds.
+8 Time integration:
+   Work done:  46.5 %. Estimated time left:   0 min. 35 seconds.
+   Work done:  92.9 %. Estimated time left:   0 min.  5 seconds.
+
+
+   Local order: 4.9057  4.9973  5.0009  5.0003  5.0001  4.9999  4.9987
+
+   Global order:        3.7505  3.9167  3.9607  3.9797  3.9896  3.9947  3.9970
+
+done ftorder
+Scheme: LobattoIIIA6
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 Time integration:
+   Work done:  93.5 %. Estimated time left:   0 min.  2 seconds.
+7 Time integration:
+   Work done:  49.2 %. Estimated time left:   0 min. 31 seconds.
+   Work done:  88.9 %. Estimated time left:   0 min.  8 seconds.
+8 Time integration:
+   Work done:  24.4 %. Estimated time left:   1 min. 35 seconds.
+   Work done:  51.2 %. Estimated time left:   0 min. 56 seconds.
+   Work done:  78.7 %. Estimated time left:   0 min. 24 seconds.
+
+
+   Local order: 7.8519  6.2791  5.4888  5.0596  4.9989  4.4038  2.5379
+
+   Global order:        6.0850  6.1032  6.0619  6.0150  4.6046  0.2961  0.0092
+
+done ftorder
+
+%
+%   Crouch-Grossman methods
+%
+
+Scheme: CG23
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 3.5252  3.2419  3.0764  3.0205  3.0052  3.0013  3.0003
+
+   Global order:        2.0806  2.0185  2.0045  2.0011  2.0003  2.0001  2.0000
+
+done ftorder
+Scheme: CG3a
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 4.2134  4.0553  4.0137  4.0034  4.0009  4.0002  4.0001
+
+   Global order:        3.0975  3.0337  3.0109  3.0038  3.0014  3.0006  3.0003
+
+done ftorder
+Scheme: CG43
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 5.8173  4.9797  4.9882  4.9968  4.9992  4.9998  4.9999
+
+   Global order:        4.1522  3.8376  3.9359  3.9797  3.9933  3.9975  3.9990
+
+done ftorder
+Scheme: CG34
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 5.9869  5.1240  5.0056  4.9368  4.7777  4.4767  4.1923
+
+   Global order:        4.2270  3.9870  3.9287  3.8709  3.7471  3.5492  3.3324
+
+done ftorder
+Scheme: CG4a
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 5.4348  5.1061  5.0257  5.0064  5.0016  5.0004  5.0001
+
+   Global order:        3.9733  4.0173  4.0094  4.0048  4.0025  4.0013  4.0006
+
+done ftorder
+Scheme: CG5a
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 Time integration:
+   Work done:  85.0 %. Estimated time left:   0 min.  5 seconds.
+
+
+   Local order: 6.2541  6.1268  6.0395  6.0105  6.0025  5.9913  5.8677
+
+   Global order:        3.5361  4.5590  4.8277  4.9238  4.9641  4.9803  4.9161
+
+done ftorder
+Scheme: CG4test
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 Time integration:
+   Work done:  93.3 %. Estimated time left:   0 min.  2 seconds.
+6 Time integration:
+   Work done:  51.6 %. Estimated time left:   0 min. 29 seconds.
+   Work done: 100.0 %. Estimated time left:   0 min.  0 seconds.
+7 Time integration:
+   Work done:  27.0 %. Estimated time left:   1 min. 24 seconds.
+   Work done:  50.8 %. Estimated time left:   1 min.  2 seconds.
+   Work done:  77.8 %. Estimated time left:   0 min. 26 seconds.
+8 Time integration:
+   Work done:  15.7 %. Estimated time left:   2 min. 45 seconds.
+   Work done:  31.5 %. Estimated time left:   2 min. 12 seconds.
+   Work done:  47.2 %. Estimated time left:   1 min. 41 seconds.
+   Work done:  63.0 %. Estimated time left:   1 min. 11 seconds.
+   Work done:  78.7 %. Estimated time left:   0 min. 41 seconds.
+   Work done:  94.5 %. Estimated time left:   0 min. 11 seconds.
+
+
+   Local order: 5.3511  5.0929  5.0239  5.0064  5.0031  5.0067  5.0261
+
+   Global order:        3.9623  4.0043  3.9974  3.9970  3.9988  4.0027  4.0153
+
+done ftorder
+
+%
+%   Magnus type methods
+%
+
+Scheme: M4a
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 5.9317  5.2994  5.0774  5.0194  5.0048  5.0010  4.9997
+
+   Global order:        3.7048  3.9425  3.9869  3.9968  3.9992  3.9999  4.0019
+
+done ftorder
+Scheme: M6a
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 7.6087  6.7128  6.5930  6.0089  5.3677  4.5215  2.5534
+
+   Global order:        5.0803  5.7761  5.9449  5.9878  6.0919  3.2609  -0.1491
+
+done ftorder
+Scheme: MRC3
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 5.5494  5.1644  5.0431  5.0109  5.0027  5.0006  4.9997
+
+   Global order:        3.8409  3.9705  3.9934  3.9984  3.9996  4.0000  4.0015
+
+done ftorder
+Scheme: MC4
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 5.9317  5.2994  5.0774  5.0194  5.0048  5.0010  4.9997
+
+   Global order:        3.7048  3.9425  3.9869  3.9968  3.9992  3.9999  4.0019
+
+done ftorder
+
+%
+%   Fer type methods
+%
+
+Scheme: fer2a
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 3.3120  3.1103  3.0308  3.0079  3.0020  3.0005  3.0001
+
+   Global order:        1.8996  1.9739  1.9935  1.9984  1.9996  1.9999  2.0000
+
+done ftorder
+Scheme: fer4G2
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 6.2296  5.3530  5.0863  5.0212  5.0053  5.0012  4.9957
+
+   Global order:        4.8636  4.5605  3.9595  3.8703  3.9195  3.9574  3.9763
+
+done ftorder
+Scheme: fer5GR
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 6.9379  6.2901  6.0797  6.0205  6.0051  5.9899  5.8696
+
+   Global order:        4.7513  4.9040  4.9704  4.9899  4.9961  4.9984  4.9647
+
+done ftorder
+Scheme: fer6G3
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 Time integration:
+   Work done:  64.6 %. Estimated time left:   0 min. 16 seconds.
+
+
+   Local order: 7.4065  7.0795  6.9620  6.7692  6.2418  5.0356  2.6128
+
+   Global order:        5.7035  5.9307  5.9890  5.9994  5.9624  4.5510  0.4641
+
+done ftorder
+Scheme: fer6GLR
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 Time integration:
+   Work done:  59.8 %. Estimated time left:   0 min. 20 seconds.
+
+
+   Local order: 7.4065  7.0795  6.9620  6.7692  6.2418  5.0356  2.6128
+
+   Global order:        5.7035  5.9307  5.9890  5.9994  5.9623  4.5510  0.4653
+
+done ftorder
+Scheme: FRC3
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 4.4509  4.1469  4.0402  4.0103  4.0026  4.0006  4.0002
+
+   Global order:        3.0339  3.0134  3.0041  3.0010  3.0002  3.0000  3.0000
+
+done ftorder
+Scheme: FC4
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 Time integration:
+   Work done:  66.1 %. Estimated time left:   0 min. 15 seconds.
+
+
+   Local order: 5.5815  5.1438  4.9294  4.6718  4.3408  4.1174  4.0326
+
+   Global order:        3.8290  3.9423  3.9368  3.7995  3.4894  3.1838  3.0451
+
+done ftorder
+
+%
+%   Special kind of coefficients for particular methods
+%
+
+Scheme: qq4a
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 5.7084  5.1715  5.0412  5.0102  5.0025  5.0006  5.0001
+
+   Global order:        3.4041  3.7874  3.9398  3.9844  3.9961  3.9990  3.9994
+
+done ftorder
+Scheme: qq6a
+Estimating order of approximation:
+   looping 8 times: 1 2 3 4 5 6 7 8 
+
+   Local order: 7.9844  7.2855  7.0663  6.9789  6.7387  5.4834  5.4474
+
+   Global order:        5.0985  5.6515  5.8982  5.9733  5.9889  5.7334  2.2610
+
+done ftorder

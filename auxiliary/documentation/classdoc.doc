@@ -1,0 +1,73 @@
+SPECIFICATION OF: classname
+----------------
+
+SUMMARY: parent_class class classname
+-------
+	Based on:
+	--------
+       %list all classes on which its definition is depending
+	Properties: 
+	----------
+	   %very short description
+	  
+PURPOSE:
+-------
+   %A longer description, informal.
+
+DESCRIPTION: %Formal description
+-----------
+   Types: %short names for classes used in the formal description
+   -----
+      shortname  = fullname
+      shortname2 = fullname2
+      ...
+   
+   Definitions:
+   -----------
+      %if possible, give the mathematical definition of the class.
+
+   MATLAB representation:
+   ---------------------
+      % Show the building of an object in the class as a MATLAB
+      % struct. 
+  
+   Operations:
+   ----------
+   Constructors:
+      %See 'conventions.txt' for description of the required signature of 
+      %the constructors.
+      
+   Observers: %functions that observe a property of an object without changing it.
+      %General signature:
+      function_name : src_type1,src_type2,... -> dest_type
+      function [dest_var] = function_name(src_name1,src_name2,...)
+         Preconditions: %is the function always defined or not?
+         Result: %what does it do?
+         More precisely: %a precise mathematical definition can be given
+         Remark: %a remark can be given
+         Example: %sometimes an example is illustrative
+   
+      %Example of a signature:         
+      isMatrix     : Lalg,mat->bool      %signature in mathematical form
+      function [i] = ismatrix(g,m)       %signature in matlab form
+         Result: checks if m could be matrix representation for data in Lalg.
+            If hasmatrix(g)==0, then ismatrix(g,m) returns 0 always.
+         Example: in class laso it would check if m is skew-symmtetric.
+         
+    --- optional --- 
+      %below comes observers that are not always defined
+      
+   Generators: %operations that generate objects of this or another class
+         
+    --- optional ---
+      %below comes generators that are not always defined
+            
+   Conventions:
+      %standard operations that ALL classes should have. Sometimes their
+      %precise definition should be given here. If nothing is written here,
+      %the definitions in 'diffmanstandards.doc' apply.
+      
+Written   by: Hans Munthe-Kaas, 22/8-97
+Validated by:
+Accepted  by:
+   
