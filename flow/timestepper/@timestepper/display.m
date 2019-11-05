@@ -3,14 +3,10 @@ function [] = display(obj)
 % function [] = display(obj)
 
 % WRITTEN BY       : Hans Munthe-Kaas, 1997 Dec.
-% LAST MODIFIED BY : Kenth Engø, 2000.04.18
+% LAST MODIFIED BY : Kenth Engø-Monsen, 2019.11.05
 
-isLoose = strcmp(get(0,'FormatSpacing'),'loose');
 line1 = sprintf('%s =', inputname(1));
 fprintf('%s\n', line1);
-if (isLoose)
-  fprintf('\n');
-end;
 
 if strcmp(class(obj),'timestepper'),    % Display object of TIMESTEPPER class.
   disp('Class:  timestepper (Virtual superclass)');

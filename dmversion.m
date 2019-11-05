@@ -3,8 +3,8 @@ function [version,date] = dmversion()
 % function [version,date] = dmversion()
 
 % WRITTEN BY       : Kenth Engø, 1999.04.01
-% LAST MODIFIED BY : Kenth Engø-Monsen, 2012.04.24
+% LAST MODIFIED BY : Kenth Engø-Monsen, 2019.11.05
 
-version = '2.01';
-date    = '2012.05.01';
+version = '2.02';
+date    = '2019.11.05';
 return;

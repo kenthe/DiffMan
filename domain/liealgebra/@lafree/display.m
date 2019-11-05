@@ -2,18 +2,14 @@ function display(obj)
 % DISPLAY - Diffman: LIEALGEBRA class LAFREE function
 
 % WRITTEN BY       : Hans Munthe-Kaas, 1997 Sept.
-% LAST MODIFIED BY : Hans Munthe-Kaas, 1998.11.06
+% LAST MODIFIED BY : Kenth Engø-Monsen, 2019.11.05
 
 if (nargin ~= 1)|(nargout ~= 0),
   error('Wrong number of input/output arguments!');
 end;
 
-isLoose = strcmp(get(0,'FormatSpacing'),'loose');
 line1 = sprintf('%s =', inputname(1));
 fprintf('%s\n', line1);
-if (isLoose)
-  fprintf('\n');
-end
 
 if max(size(obj)>1), % The object is an array of objects
     [m,n] = size(obj);

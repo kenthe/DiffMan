@@ -3,7 +3,7 @@ function [] = dminit()
 % function [] = dminit()
 
 % WRITTEN BY       : Hans Munthe-Kaas, 1997 Sept.
-% LAST MODIFIED BY : Kenth Engø-Monsen, 2012.04.30
+% LAST MODIFIED BY : Kenth Engø-Monsen, 2019.11.05
 
 % Global variables
 global DMPROGREP DMARGCHK DMSHOWSHAPE DMSHOWDATA DMOPTIMIZE

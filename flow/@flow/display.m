@@ -2,19 +2,15 @@ function [] = display(obj)
 % DISPLAY - Display a FLOW object.
 
 % WRITTEN BY       : Kenth Engø, 1997 Oct.
-% LAST MODIFIED BY : Kenth Engø, 1999.03.05
+% LAST MODIFIED BY : Kenth Engø-Monsen, 2019.11.05
 
 global DMARGCHK
 
 if DMARGCHK
 end;
 
-isLoose = strcmp(get(0,'FormatSpacing'),'loose');
 line1 = sprintf('%s =', inputname(1));
 fprintf('%s\n', line1);
-if (isLoose)
-  fprintf('\n');
-end;
 
 disp('Class: flow');
 vf = obj.vectorfield;

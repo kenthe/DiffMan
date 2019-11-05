@@ -3,16 +3,12 @@ function [] = display(obj)
 % function [] = display(obj)
 
 % WRITTEN BY       : Kenth Engø, 1997 Oct.
-% LAST MODIFIED BY : Kenth Engø, 1999.04.12
+% LAST MODIFIED BY : Kenth Engø-Monsen, 2019.11.05
 
 global DMSHOWDATA DMSHOWSHAPE
 
-isLoose = strcmp(get(0,'FormatSpacing'),'loose');
 line1 = sprintf('%s =', inputname(1));
 fprintf('%s\n', line1);
-if (isLoose)
-  fprintf('\n');
-end;
 
 disp('Class: ladirprod');
 if iscellempty(obj(1).shape), return; end;

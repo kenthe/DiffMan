@@ -3,16 +3,12 @@ function display(obj)
 % function display(obj)
 
 % WRITTEN BY       : Kenth Engø, 1998.01.26
-% LAST MODIFIED BY : Kenth Engø, 1999.04.07
+% LAST MODIFIED BY : Kenth Engø-Monsen, 2019.11.05
 
 global DMSHOWSHAPE DMSHOWDATA
 
-isLoose = strcmp(get(0,'FormatSpacing'),'loose');
 line1 = sprintf('%s =', inputname(1));
 fprintf('%s\n', line1);
-if (isLoose)
-  fprintf('\n');
-end;
 
 disp(['Class: hmtop']);
 if isempty(obj.shape), return; end;

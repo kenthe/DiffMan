@@ -11,6 +11,9 @@ if DMARGCHK
   if a.shape ~= b.shape
     error('Arguments are not of same shape!');
   end;
+  if a.shape ~= 3
+    error('Implementation works for shape = 3 only!');
+  end;
 end;
 
 c = a;

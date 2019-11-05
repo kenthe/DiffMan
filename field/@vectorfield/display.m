@@ -3,14 +3,10 @@ function [] = display(obj)
 % function [] = display(obj)
 
 % WRITTEN BY       : Kenth Engø, 1998 June.
-% LAST MODIFIED BY : Kenth Engø, 2000.04.10
+% LAST MODIFIED BY : Kenth Engø, 2019.11.05
 
-isLoose = strcmp(get(0,'FormatSpacing'),'loose');
 line1 = sprintf('%s =', inputname(1));
 fprintf('%s\n', line1);
-if (isLoose)
-  fprintf('\n');
-end;
 
 disp('Class:  vectorfield');
 dom  = obj.domain;
